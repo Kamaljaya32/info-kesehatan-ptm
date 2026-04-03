@@ -102,7 +102,7 @@ export default function App() {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ delay: 1, duration: 1 }}
-          className="z-10 w-full max-w-6xl text-center mt-12 border-t border-gray-100 pt-6 text-sm text-gray-500"
+          className="z-10 w-full max-w-6xl text-center mt-12 pt-6 text-sm text-gray-500"
         >
           <p className="font-semibold text-gray-700 mb-2">Dipresentasikan Oleh:</p>
           <div className="flex flex-col sm:flex-row justify-center items-center gap-2 sm:gap-6 mb-2">
@@ -110,7 +110,11 @@ export default function App() {
             <span className="hidden sm:inline text-gray-300">|</span>
             <p>Auliya Septiani - 14120240038</p>
           </div>
-          <p className="font-medium text-teal-700">Universitas Muslim Indonesia Makassar</p>
+          <div className="flex flex-col items-center gap-1 text-teal-700">
+              <p className="text-lg font-bold">Universitas Muslim Indonesia</p>
+              <p className="text-base font-medium">Makassar</p>
+              <p className="text-base font-medium">2026</p>
+            </div>
         </motion.footer>
       </div>
     );
