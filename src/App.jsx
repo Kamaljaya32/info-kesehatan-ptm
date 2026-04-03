@@ -49,12 +49,11 @@ export default function App() {
     return topics.filter(t => disease[t.id] && disease[t.id].length !== 0);
   };
 
-  // LANDING PAGE
+// LANDING PAGE
   if (view === 'landing') {
     return (
       <div className="min-h-screen flex flex-col items-center justify-center bg-linear-to-br from-teal-50 to-white p-4 relative overflow-hidden">
         
-
         <motion.img 
           src="https://feb.umi.ac.id/wp-content/uploads/2023/02/Logo-UMI.png" 
           alt="Logo Universitas UMI Makassar"
@@ -68,7 +67,7 @@ export default function App() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, delay: 0.2 }}
-          className="text-center max-w-2xl z-10 grow flex flex-col items-center justify-center" // z-10 agar di atas logo background
+          className="text-center max-w-2xl z-10 grow flex flex-col items-center justify-center translate-y-8 md:translate-y-12" 
         >
           <motion.div 
             animate={{ y: [0, -10, 0] }} 
@@ -77,7 +76,6 @@ export default function App() {
           >
             <div className="p-6 bg-teal-100 rounded-full shadow-lg shadow-teal-100/50 relative">
               <Stethoscope className="w-16 h-16 md:w-20 md:h-20 text-teal-600" />
-              {/* Ping animation untuk efek modern */}
               <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-teal-400 opacity-20 top-0 left-0"></span>
             </div>
           </motion.div>
@@ -91,7 +89,7 @@ export default function App() {
           </p>
 
           <motion.button
-            whileHover={{ scale: 1.05, gap: '12px' }} // Animasi hover gap ikon melebar
+            whileHover={{ scale: 1.05, gap: '12px' }} // animasi hover gap ikon melebar
             whileTap={{ scale: 0.95 }}
             onClick={() => setView('diseases')}
             className="bg-teal-600 hover:bg-teal-700 text-white font-semibold py-4 px-10 rounded-full shadow-lg shadow-teal-200 transition-all text-lg flex items-center gap-2 mx-auto"
