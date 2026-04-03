@@ -52,37 +52,68 @@ export default function App() {
   // LANDING PAGE
   if (view === 'landing') {
     return (
-      <div className="min-h-screen flex items-center justify-center bg-linear-to-br from-teal-50 to-white p-4">
+      <div className="min-h-screen flex flex-col items-center justify-center bg-linear-to-br from-teal-50 to-white p-4 relative overflow-hidden">
+        
+
+        <motion.img 
+          src="https://feb.umi.ac.id/wp-content/uploads/2023/02/Logo-UMI.png" 
+          alt="Logo Universitas UMI Makassar"
+          initial={{ opacity: 0, scale: 1.2, x: "-50%", y: "-50%" }}
+          animate={{ opacity: 0.05, scale: 1, x: "-50%", y: "-50%" }} 
+          transition={{ duration: 1.5, ease: "easeOut" }}
+          className="absolute top-1/2 left-1/2 pointer-events-none z-0 w-3/4 md:w-1/3 grayscale" 
+        />
+
         <motion.div 
-          initial={{ opacity: 0, scale: 0.9 }}
-          animate={{ opacity: 1, scale: 1 }}
-          transition={{ duration: 0.5 }}
-          className="text-center max-w-2xl"
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5, delay: 0.2 }}
+          className="text-center max-w-2xl z-10 grow flex flex-col items-center justify-center" // z-10 agar di atas logo background
         >
           <motion.div 
             animate={{ y: [0, -10, 0] }} 
             transition={{ repeat: Infinity, duration: 3, ease: "easeInOut" }}
             className="flex justify-center mb-6"
           >
-            <div className="p-6 bg-teal-100 rounded-full shadow-lg shadow-teal-100">
-              <Stethoscope className="w-20 h-20 text-teal-600" />
+            <div className="p-6 bg-teal-100 rounded-full shadow-lg shadow-teal-100/50 relative">
+              <Stethoscope className="w-16 h-16 md:w-20 md:h-20 text-teal-600" />
+              {/* Ping animation untuk efek modern */}
+              <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-teal-400 opacity-20 top-0 left-0"></span>
             </div>
           </motion.div>
-          <h1 className="text-4xl md:text-5xl font-extrabold text-gray-800 mb-6 tracking-tight">
+
+          <h1 className="text-4xl md:text-5xl font-extrabold text-gray-800 mb-6 tracking-tight leading-tight">
             Portal Edukasi <span className="text-teal-600">Kesehatan PTM</span>
           </h1>
-          <p className="text-lg md:text-xl text-gray-600 mb-10 leading-relaxed">
+
+          <p className="text-lg md:text-xl text-gray-600 mb-10 leading-relaxed max-w-lg mx-auto">
             Kenali, pahami, dan cegah Penyakit Tidak Menular (PTM) sedini mungkin untuk masa depan yang lebih sehat.
           </p>
+
           <motion.button
-            whileHover={{ scale: 1.05 }}
+            whileHover={{ scale: 1.05, gap: '12px' }} // Animasi hover gap ikon melebar
             whileTap={{ scale: 0.95 }}
             onClick={() => setView('diseases')}
-            className="bg-teal-600 hover:bg-teal-700 text-white font-semibold py-4 px-10 rounded-full shadow-lg shadow-teal-200 transition-colors text-lg flex items-center gap-2 mx-auto"
+            className="bg-teal-600 hover:bg-teal-700 text-white font-semibold py-4 px-10 rounded-full shadow-lg shadow-teal-200 transition-all text-lg flex items-center gap-2 mx-auto"
           >
-            Mulai Belajar <ChevronRight />
+            Mulai Belajar <ChevronRight className="w-5 h-5" />
           </motion.button>
         </motion.div>
+
+        <motion.footer 
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ delay: 1, duration: 1 }}
+          className="z-10 w-full max-w-6xl text-center mt-12 border-t border-gray-100 pt-6 text-sm text-gray-500"
+        >
+          <p className="font-semibold text-gray-700 mb-2">Dipresentasikan Oleh:</p>
+          <div className="flex flex-col sm:flex-row justify-center items-center gap-2 sm:gap-6 mb-2">
+            <p>Dini Yuliani Nurdin - 14120240036</p>
+            <span className="hidden sm:inline text-gray-300">|</span>
+            <p>Auliya Septiani - 14120240038</p>
+          </div>
+          <p className="font-medium text-teal-700">Universitas Muslim Indonesia Makassar</p>
+        </motion.footer>
       </div>
     );
   }
