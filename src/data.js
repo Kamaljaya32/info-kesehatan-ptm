@@ -1,9 +1,9 @@
 export const ptmData = [
   {
     id: "dm",
-    title: "Diabetes Mellitus",
+    title: "Diabetes Melitus",
     icon: "Activity",
-    image: "https://dinkes.bandaacehkota.go.id/wp-content/uploads/sites/36/2025/01/diabetes-1536x864.jpg",
+    image: "https://rsu.jembranakab.go.id/uploads/berita/berita_222411111147_DIETSEIMBANGUNTUKPENDERITADIABETESMELITUS.jpg",
     pengertian: "Diabetes Mellitus adalah penyakit kronis yang terjadi ketika tubuh tidak mampu mengatur kadar gula (glukosa) dalam darah. Hal ini disebabkan oleh gangguan produksi atau fungsi insulin.",
     jenis: [
       "Diabetes Tipe 1: Tubuh tidak memproduksi insulin sama sekali.",
@@ -33,7 +33,7 @@ export const ptmData = [
     id: "kanker",
     title: "Kanker",
     icon: "Microscope",
-    image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR13ONbG9c-uIi3ySaeA7zIqmfcKtfT_Z2o_w&s",
+    image: "https://media.istockphoto.com/id/2149658353/id/vektor/karakter-kartun-sel-kanker-konsep-penyakit-kanker.jpg?s=612x612&w=0&k=20&c=jOvwA3HvK515CYU6yjc59zF1Xiy06Il5FkE0sVn3vHs=",
     pengertian: "Kanker adalah penyakit yang terjadi ketika sel-sel dalam tubuh tumbuh secara tidak normal dan tidak terkendali. Sel kanker dapat menyebar ke bagian tubuh lain (metastasis) dan merusak fungsi organ.",
     jenis: ["Kanker Payudara", "Kanker Paru-paru", "Kanker Serviks", "Kanker Prostat", "Kanker Kulit"],
     penyebab: ["Mutasi genetik", "Kebiasaan merokok", "Paparan radiasi atau bahan kimia berbahaya", "Pola makan tidak sehat", "Infeksi tertentu (misalnya HPV)", "Faktor keturunan"],
@@ -46,7 +46,7 @@ export const ptmData = [
     id: "hipertensi",
     title: "Hipertensi",
     icon: "HeartPulse",
-    image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQVE7IkWDQXdM6LcK0rhkhO-tRWd6a-CAR80Q&s",
+    image: "https://d1bpj0tv6vfxyp.cloudfront.net/ini6kondisikesehatanyangbisapicuhipertensisekunderhalodoc.jpg",
     pengertian: "Hipertensi atau tekanan darah tinggi adalah kondisi ketika tekanan darah dalam pembuluh darah berada di atas normal secara terus-menerus. Kondisi ini sering disebut sebagai “silent killer” karena sering tidak menimbulkan gejala.",
     jenis: [],
     penyebab: ["Konsumsi garam berlebihan", "Kurang aktivitas fisik", "Stres", "Obesitas", "Merokok dan konsumsi alkohol", "Faktor keturunan"],
